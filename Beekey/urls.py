@@ -19,10 +19,11 @@ from Beekey.settings import MEDIA_ROOT
 from django.views.static import serve
 
 from rest_framework.routers import DefaultRouter
-from basic.views import BannerViewset, NewsViewset
+from basic.views import BasicViewset, BannerViewset, NewsViewset
 
 router = DefaultRouter()
 
+router.register(r'basic', BasicViewset, base_name="basic")
 router.register(r'banner', BannerViewset, base_name="banner")
 router.register(r'news', NewsViewset, base_name="news")
 
