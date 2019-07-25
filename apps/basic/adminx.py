@@ -14,7 +14,8 @@ xadmin.site.register(views.CommAdminView, GlobalSettings)
 
 
 class basicAdmin(object):
-    list_display = ['name', "companyName", "update_time", "add_time"]
+    list_display = ['name', "companyName", "is_open", "update_time", "add_time"]
+    list_editable = ["is_open"]
     model_icon = 'fa fa-empire'
 
 xadmin.site.register(basicModel, basicAdmin)
@@ -31,6 +32,7 @@ class newsAdmin(object):
     list_display = ["name", 'is_hot', "time"]
     list_editable = ["name", "is_hot", "time"]
     ordering = ('id',)
+    style_fields = {"content": "ueditor"}
     model_icon = 'fa fa-newspaper-o'
 
 xadmin.site.register(newsModel, newsAdmin)
