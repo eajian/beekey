@@ -17,7 +17,7 @@ django-reversion==3.0.4
 djangorestframework==3.9.4
 et-xmlfile==1.0.1
 future==0.17.1
-httplib2==0.13.0
+httplib2==0.18.0
 idna==2.8
 imagekit==1.0.6
 itypes==1.1.0
